@@ -1,0 +1,12 @@
+<br/><br/>
+<div class="container">
+    <div class="text-center">
+        <img class="avatar js-action-profile-avatar" src="https://abs.twimg.com/sticky/default_profile_images/default_profile_bigger.png" alt="">
+    </div>
+
+<div class="text-center">
+    <h3><%=@tweet.contents%></h3>
+    <a class="btn btn-outline-warning" href="/tweet/<%= @tweet.id %>/edit">modify</a>
+    <a class="btn btn-outline-danger" href="/tweet/<%= @tweet.id %>/destroy">delete</a>
+    </div>
+</div>

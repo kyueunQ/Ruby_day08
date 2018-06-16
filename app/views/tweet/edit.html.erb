@@ -1,0 +1,8 @@
+<br/><br/>
+<div class="container">
+    <form action="/tweet/<%= @tweet.id %>/update" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
+        <input type="text" name="contents" value="<%= @tweet.contents %>">
+        <input type="submit" value="re_tweet">
+    </form>
+</div>

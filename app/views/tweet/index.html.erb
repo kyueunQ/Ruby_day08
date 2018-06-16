@@ -1,0 +1,6 @@
+
+<ul>
+    <% @tweets.each do |tweet| %>
+    <li><a href="/tweet/<%=tweet.id %>"><%=tweet.contents.truncate(10)%><small>(<%= tweet.ip_address %>)</small></a></li>
+    <% end %>
+</ul>
