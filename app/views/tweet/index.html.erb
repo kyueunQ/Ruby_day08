@@ -1,6 +1,6 @@
-
-<ul>
+<div class="list-group">
     <% @tweets.each do |tweet| %>
-    <li><a href="/tweet/<%=tweet.id %>"><%=tweet.contents.truncate(10)%><small>(<%= tweet.ip_address %>)</small></a></li>
+        <%= link_to truncate(tweet.contents, length:13), "/tweet/#{tweet.id}", class: "list-group-item list-group-item-action" %>
+        <!-- <%=tweet.created_at %> -->
     <% end %>
-</ul>
+</div>

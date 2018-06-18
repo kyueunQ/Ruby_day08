@@ -10,9 +10,25 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery3
+//= require jquery
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require toastr_rails
 //= require turbolinks
 //= require_tree .
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "progressBar": true,
+  "positionClass": "toast-top-right",
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+};

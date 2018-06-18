@@ -13,9 +13,8 @@
       <h5 class="my-0 mr-md-auto font-weight-normal">twitter</h5>
       <!--<nav class="my-2 my-md-0 mr-md-3">-->
         <a href="/tweet"><img src="https://image.flaticon.com/icons/svg/733/733579.svg"></a>
-        <a class="p-10 text-dark" href="#"><img scr="https://image.flaticon.com/icons/svg/34/34205.svg">Home</a>
+        <a class="p-10 text-dark" href="/"><img scr="https://image.flaticon.com/icons/svg/34/34205.svg">Home</a>
         <a class="p-10 text-dark" href="#">Notifications</a>
-        <a class="p-10 text-dark" href="#"><img src="https://image.flaticon.com/icons/svg/131/131155.svg">Messages</a>
         <input class="search-input" type="text" id="search-query" placeholder="Search Twitter" name="q" autocomplete="off" spellcheck="false" aria-autocomplete="list" aria-expanded="false" aria-owns="typeahead-dropdown-1">
         
       <!--</nav>-->
@@ -24,8 +23,13 @@
 
     </div>
     <div class="container">
-         <%= yield %>
-    </div>
+      <% flash.each do |k, v| %>
+        <script>
+          toastr.<%= k %>("<%= v %>");
+        </script>
+      <% end %>
+      <%= yield %>
+    </div>  
   </body>
 </html>
 

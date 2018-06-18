@@ -1,8 +1,8 @@
-<form action="/tweet/create" method="POST">
-    <div class="modal-header">
-        <h3 class="modal-title" id="Tweetstorm-dialog-header">Compose new Tweet</h3>
-      </div>
-    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token%>">
-    <input type="text" name="contents" placeholder="What's happening?">
-    <input type="submit" value="tweet">
-</form>
+<%= form_tag('/tweet/create') do %>
+<div class="text-center">
+        <h3 class="modal-title" id="Tweetstorm-dialog-header">Compose new Tweet</h3><br/>
+    <%= text_area_tag(:contents, params[:contents], placeholder: "What's happening?", size: "24x6") %>
+    <%= submit_tag "tweet", class: "btn btn-primary" %>
+<% end %>
+</div>
+
