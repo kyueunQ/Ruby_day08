@@ -1,4 +1,4 @@
-## Day 07 : form helper, flash, toastr_rails
+## Day 08 : form helper, flash, toastr_rails
 
 
 
